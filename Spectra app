@@ -1,0 +1,33 @@
+name: spectra_app
+description: "Application de mobilité communautaire A7"
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.2.3
+  geolocator: ^11.0.1
+  http: ^1.1.0
+  provider: ^6.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+{
+  "name": "spectra-backend",
+  "version": "1.0.0",
+  "description": "Backend pour Spectra A7",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
