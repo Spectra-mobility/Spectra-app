@@ -1,0 +1,131 @@
+spectra-app/
+├── 📄 README.md
+├── 📄 pubspec.yaml
+├── 📄 package.json
+├── 📄 LICENSE
+├── 📄 CODE_OF_CONDUCT.md
+├── 📄 index.html
+├── 📄 docker-compose.yml
+├── 📄 spectre.md
+├── 📁 src/
+│   ├── 📄 main.dart
+│   └── 📄 app.dart
+└── 📁 assets/
+    └── 📁 images/
+# 🚀 Spectra - Écosystème Mobilité Intelligente A7
+
+## 🎯 Vision
+Application communautaire pour usagers A7 - Sécurité, entraide, innovation
+
+## 🛣️ Focus A7
+Lille → Paris → Lyon → Marseille → Barcelone → Algéciras
+
+## 🏗️ Architecture
+```mermaid
+graph TB
+    subgraph C1 [📱 Client Sécurisé]
+        A1[App Flutter]
+        A2[Web App]
+    end
+    subgraph C2 [🔵 Sécurité Réseau]
+        B1[WAF Cloudflare]
+        B2[Zero Trust Gateway]
+    end
+    subgraph C3 [🟠 Plateforme Métier]
+        C1[API Gateway]
+        C2[Microservices]
+    end
+    subgraph C4 [🟣 Data & Blockchain]
+        D1[PostgreSQL]
+        D2[Solana SPT]
+    end
+    C1 --> C2 --> C3 --> C4
+
+### **📄 2. pubspec.yaml**
+```yaml
+name: spectra_app
+description: "Application de mobilité communautaire A7"
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.2.3
+  geolocator: ^11.0.1
+  http: ^1.1.0
+  provider: ^6.1.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+{
+  "name": "spectra-backend",
+  "version": "1.0.0",
+  "description": "Backend pour Spectra A7",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
+Copyright 2024 Spectra Mobility
+Licensed under the Apache License, Version 2.0
+
+# Code de Conduite
+Nous maintenons un environnement respectueux.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spectra - Mobilité A7</title>
+</head>
+<body>
+    <h1>🚀 Spectra</h1>
+    <p>Application mobilité A7</p>
+</body>
+</html>
+
+version: '3.8'
+services:
+  app:
+    build: .
+    ports: ["3000:3000"]
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: spectra
+import 'package:flutter/material.dart';
+import 'app.dart';
+
+void main() {
+  runApp(SpectraApp());
+}
+
+class SpectraApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Spectra A7',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Spectra A7')),
+      body: Center(child: Text('Bienvenue sur Spectra!')),
+    );
+  }
+}
+
